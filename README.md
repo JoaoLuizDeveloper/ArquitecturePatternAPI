@@ -1,5 +1,3 @@
-✅ Architectural Patterns
+✅ Architectural Patterns CQRS
 
-1_ Clean Architecture
 
-2_ CQRS
