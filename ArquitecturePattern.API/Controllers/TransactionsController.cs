@@ -1,38 +1,33 @@
+ï»¿using ArquitecturePattern.Commands.CreateTransaction;
+using ArquitecturePattern.Queries.GetTransactions;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using FinancialProject.Domain.Entities;
-using FinancialProject.Domain.Entities.Abstractions;
 
-namespace FinancialProject.API.Controllers
+namespace ArquitecturePattern.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class TransactionsController : ControllerBase
     {
-        #region Polimorfism example with transactions
-        /// <summary>
-        /// Shows a polimorfism with a list of transactions
-        /// </summary>
-        [HttpGet("ListTransactions")]
-        public IActionResult ListTransactions()
+        private readonly IMediator _mediator;
+
+        public TransactionsController(IMediator mediator)
         {
-            // Usando a classe base Transaction como tipo de referência
-            // Consigo trabalhar com as classes filhas TransactionPix e TransactionBill
-            HashSet<Transaction> transactions = new()
-            {
-                new TransactionPix { Value = 150, Key = "joaoluizdeveloper@gmail.com", DescriptionPix= "Pix are a payment method exclusive from Brazil!" },
-                new TransactionBill { Value = 250, Barcode = "237933812860008" }
-            };
-
-            var resultado = transactions.Select(t => new
-            {
-                type = t.GetType().Name,
-                description = t.Description(),
-                extraDescription = t is TransactionPix pix ? pix.DescriptionPix : "",
-                resume = t.Resume()
-            });
-
-            return Ok(resultado);
+            _mediator = mediator;
         }
-        #endregion
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateTransactionCommand command)
+        {
+            var id = await _mediator.Send(command);
+            return Ok(id);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var result = await _mediator.Send(new GetAllTransactionsQuery());
+            return Ok(result);
+        }
     }
 }
