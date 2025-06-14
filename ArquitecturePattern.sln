@@ -5,23 +5,15 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArquitecturePattern.API", "ArquitecturePattern.API\ArquitecturePattern.API.csproj", "{7862C73F-33AE-48E4-9E68-FE6618DB54AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArquitecturePattern.Application", "ArquitecturePattern.Application\ArquitecturePattern.Application.csproj", "{1FAE7E90-0606-48C8-A463-068761D04950}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArquitecturePattern.Domain", "ArquitecturePattern.Domain\ArquitecturePattern.Domain.csproj", "{C518AEE7-6FF6-43B1-AC38-BDBE25F815A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArquitecturePattern.Infrastructure", "ArquitecturePattern.Infrastructure\ArquitecturePattern.Infrastructure.csproj", "{6C4DAA32-2699-472F-A80F-AA8B9C66DB5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArquitecturePattern.Tests", "ArquitecturePattern.Tests\ArquitecturePattern.Tests.csproj", "{0902219D-6510-4A23-ACE3-B63FEE87075B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{442EDBF7-AAAD-4E94-BC1D-0626E3A6B90C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{BACD2AF4-3338-49CD-8FDA-0FECC614BF63}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{43498844-4903-4F03-B779-F300B3745962}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3B76BDCE-5FB2-4C82-BE91-DC1732DB98AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

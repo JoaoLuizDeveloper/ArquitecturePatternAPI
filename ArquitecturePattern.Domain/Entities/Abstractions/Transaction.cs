@@ -1,4 +1,4 @@
-namespace ArquitecturePattern.Domain.Entities.Abstractions
+namespace FinancialProject.Domain.Entities.Abstractions
 {
     public abstract class Transaction
     {

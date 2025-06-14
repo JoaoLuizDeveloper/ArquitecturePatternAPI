@@ -1,6 +1,6 @@
-using ArquitecturePattern.Domain.Entities.Abstractions;
+using FinancialProject.Domain.Entities.Abstractions;
 
-namespace ArquitecturePattern.Domain.Entities
+namespace FinancialProject.Domain.Entities
 {
     // A classe TransactionPIX esta herdando da classe Transaction, que é abstrata 
     // Como se ela pertencesse a classe Transaction

@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using ArquitecturePattern.Domain.Entities;
-using ArquitecturePattern.Domain.Entities.Abstractions;
+using FinancialProject.Domain.Entities;
+using FinancialProject.Domain.Entities.Abstractions;
 
-namespace ArquitecturePattern.API.Controllers
+namespace FinancialProject.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ArquitecturePattern.Application\ArquitecturePattern.Application.csproj" />
+    <ProjectReference Include="..\ArquitecturePattern.Domain\ArquitecturePattern.Domain.csproj" />
     <ProjectReference Include="..\ArquitecturePattern.Infrastructure\ArquitecturePattern.Infrastructure.csproj" />
   </ItemGroup>
 
