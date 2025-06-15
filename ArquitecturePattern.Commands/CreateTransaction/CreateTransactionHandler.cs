@@ -3,10 +3,12 @@ using MediatR;
 
 namespace ArquitecturePattern.Commands.CreateTransaction
 {
+    // O handler executa a lógica de criação da transação.
     public class CreateTransactionHandler : IRequestHandler<CreateTransactionCommand, Guid>
     {
         private static readonly List<Transaction> _transactions = new(); // Simulação de banco
 
+        // Recebe os dados de transação e cria uma nova.
         public Task<Guid> Handle(CreateTransactionCommand request, CancellationToken cancellationToken)
         {
             var transaction = new Transaction
@@ -19,7 +21,6 @@ namespace ArquitecturePattern.Commands.CreateTransaction
             return Task.FromResult(transaction.Id);
         }
 
-        // ⚠️ Em produção, injete um repositório aqui em vez de lista estática.
         public static List<Transaction> GetData() => _transactions;
     }
 }

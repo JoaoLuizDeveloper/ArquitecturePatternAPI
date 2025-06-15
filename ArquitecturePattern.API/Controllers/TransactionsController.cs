@@ -16,6 +16,11 @@ namespace ArquitecturePattern.API.Controllers
             _mediator = mediator;
         }
 
+        /// <summary>
+        /// Create a new transaction.
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateTransactionCommand command)
         {
@@ -23,6 +28,10 @@ namespace ArquitecturePattern.API.Controllers
             return Ok(id);
         }
 
+        /// <summary>
+        /// Get all transactions.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
