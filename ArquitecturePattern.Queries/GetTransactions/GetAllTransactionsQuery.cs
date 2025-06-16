@@ -4,6 +4,6 @@ using System.Collections.Generic;
 
 namespace ArquitecturePattern.Queries.GetTransactions
 {
-    // O Query deseja obter as transações.
+    // The Query is intended to retrieve the transactions
     public record GetAllTransactionsQuery() : IRequest<IEnumerable<Transaction>>;
 }

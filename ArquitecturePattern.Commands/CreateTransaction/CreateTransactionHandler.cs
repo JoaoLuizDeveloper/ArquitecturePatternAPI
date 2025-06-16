@@ -3,12 +3,12 @@ using MediatR;
 
 namespace ArquitecturePattern.Commands.CreateTransaction
 {
-    // O handler executa a lógica de criação da transação.
+    // The handler executes the logic for creating the transaction
     public class CreateTransactionHandler : IRequestHandler<CreateTransactionCommand, Guid>
     {
         private static readonly List<Transaction> _transactions = new(); // Simulação de banco
 
-        // Recebe os dados de transação e cria uma nova.
+        // Receives the transaction data and creates a new one
         public Task<Guid> Handle(CreateTransactionCommand request, CancellationToken cancellationToken)
         {
             var transaction = new Transaction

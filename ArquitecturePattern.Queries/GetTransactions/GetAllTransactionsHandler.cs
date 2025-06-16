@@ -6,7 +6,7 @@ namespace ArquitecturePattern.Queries.GetTransactions
 {
     public class GetAllTransactionsHandler : IRequestHandler<GetAllTransactionsQuery, IEnumerable<Transaction>>
     {
-        // O handler executa a lógica para obter a lista das transações.
+        // The handler executes the logic to retrieve the list of transactions
         public Task<IEnumerable<Transaction>> Handle(GetAllTransactionsQuery request, CancellationToken cancellationToken)
         {
             var list = CreateTransactionHandler.GetData();

@@ -1,6 +1,6 @@
 namespace ArquitecturePattern.Domain.Entities
 {
-    // A entidade Transaction representa uma transação financeira.
+    // The Transaction entity represents a financial transaction
     public class Transaction
     {
         public Guid Id { get; set; } = Guid.NewGuid();
